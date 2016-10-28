@@ -226,10 +226,5 @@ func (this *Server) startNewProcess() error {
 }
 
 func (this *Server) logf(format string, args ...interface{}) {
-
-	if this.httpServer.ErrorLog != nil {
-		this.httpServer.ErrorLog.Printf(format, args...)
-	} else {
-		log.Printf(format, args...)
-	}
+        log.Printf(format, args...)
 }
